@@ -15,14 +15,12 @@ import DEX from "components/DEX";
 import NFTBalance from "components/NFTBalance";
 import Wallet from "components/Wallet";
 import { Layout, Tabs } from "antd";
-import "antd/dist/antd.css";
 import NativeBalance from "components/NativeBalance";
 import "./style.css";
 import QuickStart from "components/QuickStart";
-import Ramper from "components/Ramper";
 import MenuItems from "./components/MenuItems";
 const { Header } = Layout;
-
+// import Background from "components/diabloBG.jpg";
 const styles = {
   content: {
     display: "flex",
@@ -65,7 +63,14 @@ const App = ({ isServerInfo }) => {
   }, [isAuthenticated, isWeb3Enabled]);
 
   return (
-    <Layout style={{ height: "100vh", overflow: "auto" }} className="bg-dark">
+    <Layout
+      style={{
+        height: "100vh",
+        overflow: "auto",
+        // backgroundImage: `url(${Background}`,
+        // backgroundSize: "cover",
+      }}
+    >
       <Router>
         <Header style={styles.header}>
           <Logo />
@@ -106,9 +111,6 @@ const App = ({ isServerInfo }) => {
             </Route>
             <Route path="/erc20balance">
               <ERC20Balance />
-            </Route>
-            <Route path="/onramp">
-              <Ramper />
             </Route>
             <Route path="/erc20transfers">
               <ERC20Transfers />
