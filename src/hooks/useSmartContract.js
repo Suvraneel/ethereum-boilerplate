@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import ABI from "../contracts/ABI.json";
-import { useMoralis } from "react-moralis";
+import { useMoralis, useWeb3ExecuteFunction } from "react-moralis";
 
 const smartContractAddress = "0x23b8bf53cb0dc8607b9b79f28cd5c1b5d7834cf2";
 
