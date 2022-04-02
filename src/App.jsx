@@ -21,8 +21,8 @@ import QuickStart from "components/QuickStart";
 import MenuItems from "./components/MenuItems";
 import CreateNFT from "components/CreateNFT/createNFT";
 const { Header } = Layout;
-// import VideoPlayer from "react-background-video-player";
-// import diabloVideo from "./assets/Plexus.mp4";
+import VideoPlayer from "react-background-video-player";
+import diabloVideo from "./assets/Plexus.mp4";
 // import Background from "components/diabloBG.jpg";
 const styles = {
   content: {
@@ -37,7 +37,6 @@ const styles = {
     position: "fixed",
     zIndex: 1,
     width: "100%",
-    background: "#fff",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -67,7 +66,7 @@ const App = ({ isServerInfo }) => {
 
   return (
     <>
-      {/* <VideoPlayer
+      <VideoPlayer
         className="video"
         src={
           // "https://player.vimeo.com/external/435674703.sd.mp4?s=01ad1ba21dc72c1d34728e1b77983805b34daad7&profile_id=165&oauth2_token_id=57447761"
@@ -75,7 +74,7 @@ const App = ({ isServerInfo }) => {
         }
         autoPlay={true}
         muted={true}
-      /> */}
+      />
       <Layout
         style={{
           height: "100vh",
