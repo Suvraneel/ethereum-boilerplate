@@ -1,4 +1,4 @@
-@import "~antd/dist/antd.css";
+@import "~antd/dist/antd.dark.css";
 
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after,
@@ -21,6 +21,6 @@
   border-radius: 1rem;
 }
 
-.ant-card{
+.ant-card {
   background-color: rgba(0, 0, 0, 0.596);
 }
