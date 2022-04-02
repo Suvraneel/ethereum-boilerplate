@@ -10,11 +10,12 @@ function CreateNFT() {
 
   const [nftName, setNftName] = useState("");
   const [nftDescription, setNftDescription] = useState("");
-  const [nftImage, setNftImage] = useState("");
+  // const [nftImage, setNftImage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     // save image to IPFS
+    const nftImage = document.getElementById("nftImage").files[0];
     const imageHash = await saveFile("nftImage", nftImage, {
       saveIPFS: true,
     }).then((res) => {
@@ -43,7 +44,7 @@ function CreateNFT() {
 
   return (
     <div>
-      <h1>Create NFT</h1>
+      <h1 style={{ color: "#fff" }}>Create NFT</h1>
       <input
         type="text"
         placeholder="NFT Name"
@@ -56,12 +57,7 @@ function CreateNFT() {
         value={nftDescription}
         onChange={(e) => setNftDescription(e.target.value)}
       />
-      <input
-        type="file"
-        placeholder="NFT Image"
-        value={nftImage}
-        onChange={(e) => setNftImage(e.target.files[0])}
-      />
+      <input type="file" placeholder="NFT Image" id="nftImage" />
       <button onClick={handleSubmit}>Create NFT</button>
     </div>
   );
