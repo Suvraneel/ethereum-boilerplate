@@ -19,6 +19,7 @@ import NativeBalance from "components/NativeBalance";
 import "./style.css";
 import QuickStart from "components/QuickStart";
 import MenuItems from "./components/MenuItems";
+import CreateNFT from "components/CreateNFT/createNFT";
 const { Header } = Layout;
 // import Background from "components/diabloBG.jpg";
 const styles = {
@@ -95,6 +96,9 @@ const App = ({ isServerInfo }) => {
             </Route>
             <Route path="/wallet">
               <Wallet />
+            </Route>
+            <Route path="/nft">
+              <CreateNFT />
             </Route>
             <Route path="/1inch">
               <Tabs defaultActiveKey="1" style={{ alignItems: "center" }}>
